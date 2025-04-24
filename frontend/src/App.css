@@ -1,0 +1,20 @@
+#root {
+  width: 100vw;
+  margin: 0;
+  padding: 0px;
+}
+
+.container-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

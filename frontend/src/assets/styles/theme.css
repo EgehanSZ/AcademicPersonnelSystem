@@ -1,0 +1,40 @@
+:root {
+    --primary: #d0d0d0;
+    --secondary: #8aa3b9;
+    --success: #00bfff;
+    --danger: #4caf50;
+    --warning: #21cf52;
+    --light: #f8f9fa;
+    --dark: #a7a7a7;
+
+}
+
+.primary {
+    background-color: var(--primary) !important;
+
+}
+
+.secondary {
+    background-color: var(--secondary) !important;
+
+}
+
+.dark {
+    background-color: var(--dark) !important;
+
+}
+
+.success {
+    background-color: var(--success) !important;
+
+}
+
+.danger {
+    background-color: var(--danger) !important;
+
+}
+
+.warning {
+    background-color: var(--warning) !important;
+
+}

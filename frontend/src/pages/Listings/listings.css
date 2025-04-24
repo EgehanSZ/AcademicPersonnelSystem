@@ -1,0 +1,22 @@
+.container-advertisements {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-advetisements {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.card-advetisements .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

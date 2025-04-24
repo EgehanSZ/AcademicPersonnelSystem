@@ -1,0 +1,90 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+.login-card {
+
+    width: 100%;
+    max-width: 700px;
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 37vh;
+
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #343a40;
+    margin-top: 8%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.button-group .btn {
+    width: 48%;
+    height: auto;
+    color: white;
+    border-color: black;
+    padding: 12px 0;
+    font-size: 16px;
+    margin-bottom: 5%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.button-group .btn:hover {
+    background-color: rgb(76, 175, 80);
+}
+
+@media (max-width: 768px) {
+
+
+    .login-card {
+        padding: 15px;
+    }
+
+    .login-title {
+        font-size: 20px;
+    }
+
+    .button-group .btn {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .login-title {
+        font-size: 18px;
+    }
+
+    .login-card {
+        padding: 10px;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+}
