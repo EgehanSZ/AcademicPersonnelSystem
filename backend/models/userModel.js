@@ -39,22 +39,41 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    unvan: String,
     telefon: {
         type: String,
         required: true
     },
-    telefon2: String,
-    fakulte: String,
-    bolum: String,
+
+    fakulte: {
+        type: String,
+        required: true
+    },
+    universite: {
+        type: String,
+        required: true
+    },
+    bolum: {
+        type: String,
+        required: true
+    },
+    mezuniyetYili: {
+        type: Number,
+        required: true
+    },
+    derece: {
+        type: String,
+        enum: ['lisans', 'yuksekLisans', 'doktora'],
+        required: true
+    },
+
     olusturmaTarihi: {
         type: Date,
         default: Date.now
     },
     resimUrl: String,
     basvurular: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'listings'
+        type: String,
+     //   ref: 'listings'
     }]
 
 });

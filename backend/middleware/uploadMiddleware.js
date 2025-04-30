@@ -1,6 +1,8 @@
 import multer from 'multer';
 
-const storage = multer.memoryStorage(); // Dosyayı bellekte tut
-const upload = multer({ storage });
+const upload = multer({ storage: multer.memoryStorage() });
 
 export default upload;
+
+
+

@@ -1,0 +1,120 @@
+/* Jurypanel.css */
+
+.jury-panel-container {
+    padding: 40px;
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+.jury-panel-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.jury-table .ant-table {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.jury-table .ant-table-thead>tr>th {
+    background-color: #388e3c;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.jury-table .ant-table-tbody>tr>td {
+    font-size: 15px;
+    color: #555;
+}
+
+.jury-table .ant-btn-link {
+    color: #6c63ff;
+    font-weight: 500;
+}
+
+.jury-table .ant-btn-link:hover {
+    color: #5548c8;
+}
+
+.jury-detail-page {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 50px;
+    background: #f9f9f9;
+    /* Hafif bir açık arka plan */
+    min-height: 100vh;
+    border-radius: 12px;
+}
+
+.jury-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    padding: 24px;
+    transition: 0.3s ease;
+}
+
+.jury-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.jury-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #388e3c;
+    margin-bottom: 16px;
+}
+
+.jury-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.jury-form {
+    margin-top: 24px;
+}
+
+.jury-form .ant-form-item-label>label {
+    font-weight: 600;
+    color: #388e3c;
+}
+
+.jury-form .ant-radio-wrapper {
+    color: #555;
+}
+
+.jury-form .ant-upload.ant-upload-select {
+    width: 100%;
+}
+
+.jury-form .ant-btn-primary {
+    background-color: #388e3c;
+    border-color: #388e3c;
+    height: 45px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.jury-form .ant-btn-primary:hover {
+    background-color: #2e7030;
+    border-color: #2e7030;
+}
+
+.jury-pdf-link {
+    color: #388e3c;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.jury-pdf-link:hover {
+    color: #2e7030;
+}

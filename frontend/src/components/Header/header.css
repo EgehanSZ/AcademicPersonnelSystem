@@ -9,3 +9,35 @@
     transition: transform 0.3s ease-in-out;
 
 }
+
+/* header arka planına yeşil geçişli bir görünüm */
+.navbar.danger {
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    padding: 0.5rem 1rem;
+}
+
+/* Nav linkleri arası boşluk */
+.navbar-nav .nav-link {
+    margin-right: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-link:last-child {
+    margin-right: 0;
+    /* son linke margin uygulanmasın */
+}
+
+/* Giriş/Kayıt ol butonu görünümünü iyileştir */
+button.succes.secondary {
+    background-color: #ffffff;
+    color: #27ae60;
+    border: 2px solid #27ae60;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button.succes.secondary:hover {
+    background-color: #27ae60;
+    color: white;
+}

@@ -2,7 +2,6 @@ import jwt from 'jsonwebtoken';
 
 // Token kontrolü yapan middleware
 export const authenticateToken = (req, res, next) => {
-    // EGE-KOD: TokenI header'dan alıyoruz
     const rawToken = req.headers['authorization'];
     const token = rawToken?.split(' ')[1];
     if (!token) {

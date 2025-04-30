@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Upload, Button, message } from 'antd';
+import { Form } from 'antd';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 
 const getBase64 = (img, callback) => {
@@ -12,51 +13,66 @@ const beforeUpload = (file) => {
     const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
     if (!isJpgOrPng) {
         message.error('Sadece JPG/PNG dosyası yükleyebilirsiniz!');
+        return false;
     }
     const isLt2M = file.size / 1024 / 1024 < 2;
     if (!isLt2M) {
         message.error('Resim boyutu 2MB\'tan küçük olmalı!');
+        return false;
     }
-    return isJpgOrPng && isLt2M;
+    return true;
 };
 
-export const AddPhotoStep = ({form}) => {
-    // const [loading, setLoading] = useState(false);
-    // const [imageUrl, setImageUrl] = useState();
+export const AddPhotoStep = () => {
+    const [loading, setLoading] = useState(false);
+    const [imageUrl, setImageUrl] = useState();
 
-    // const handleChange = (info) => {
-    //     if (info.file.status === 'uploading') {
-    //         setLoading(true);
-    //         return;
-    //     }
-    //     if (info.file.status === 'done') {
-    //         getBase64(info.file.originFileObj, (url) => {
-    //             setLoading(false);
-    //             setImageUrl(url);
-    //         });
-    //     }
-    // };
+    const handleChange = (info) => {
+        const file = info.file.originFileObj;
+        if (!file) return;
 
-    // const uploadButton = (
-    //     <Button
-    //         style={{ border: 0, background: 'none' }}
-    //         type="button"
-    //     >
-    //         {loading ? <LoadingOutlined /> : <PlusOutlined />}
-    //         <div style={{ marginTop: 8 }}>Yükle</div>
-    //     </Button>
-    // );
+        setLoading(true);
 
-    // return (
-    //     <Upload
-    //         name="avatar"
-    //         listType="picture-circle"
-    //         showUploadList={false}
-    //         action="https://mockapi.io/upload"
-    //         beforeUpload={beforeUpload}
-    //         onChange={handleChange}
-    //     >
-    //         {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
-    //     </Upload>
-    // );
+        // Görsel önizleme için
+        const reader = new FileReader();
+        reader.onload = () => {
+            setImageUrl(reader.result);
+            setLoading(false);
+        };
+        reader.readAsDataURL(file);
+    };
+
+    const uploadButton = (
+        <Button style={{ border: 0, background: 'none' }} type="button">
+            {loading ? <LoadingOutlined /> : <PlusOutlined />}
+            <div style={{ marginTop: 8 }}>Yükle</div>
+        </Button>
+    );
+
+    return (
+        <Form.Item
+            name="resimUrl"
+            valuePropName="fileList"
+            getValueFromEvent={(e) => {
+                return e && e.fileList ? e.fileList : [];
+            }}
+            rules={[{ required: true, message: 'Lütfen bir resim yükleyin!' }]}>
+            <Upload
+                name="resimUrl"
+                listType="picture-circle"
+                showUploadList={false}
+                beforeUpload={beforeUpload}
+                onChange={handleChange}
+                customRequest={({ onSuccess }) => { setTimeout(() => onSuccess("ok"), 0); }}
+            >
+                {imageUrl ? (
+                    <div style={{ width: '100px', height: '100px', overflow: 'hidden', borderRadius: '50%' }}>
+                        <img src={imageUrl} alt="avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                ) : (
+                    uploadButton
+                )}
+            </Upload>
+        </Form.Item>
+    );
 };

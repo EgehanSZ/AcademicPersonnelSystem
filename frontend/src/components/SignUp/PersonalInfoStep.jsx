@@ -3,7 +3,7 @@ import { Form, Input, Select, DatePicker, InputNumber } from 'antd';
 const { Option } = Select;
 
 
-export const PersonalInfoStep = ({form}) => {
+export const PersonalInfoStep = () => {
     return (
         <>
             <Form.Item

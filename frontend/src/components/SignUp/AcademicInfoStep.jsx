@@ -2,19 +2,19 @@ import React from 'react';
 import { Form, Input, Select, DatePicker, InputNumber } from 'antd';
 const { Option } = Select;
 
-export const AcademicInfostep = ({form}) => {
+export const AcademicInfostep = () => {
   return (
     <>
       <Form.Item
-        name="university"
+        name="universite"
         label="Üniversite"
         rules={[{ required: true, message: 'Lütfen üniversite adınızı giriniz!' }]}
       >
-        <Input /> 
+        <Input />
       </Form.Item>
 
       <Form.Item
-        name="faculty"
+        name="fakulte"
         label="Fakülte"
         rules={[{ required: true, message: 'Lütfen fakülte adınızı giriniz!' }]}
       >
@@ -22,7 +22,7 @@ export const AcademicInfostep = ({form}) => {
       </Form.Item>
 
       <Form.Item
-        name="department"
+        name="bolum"
         label="Bölüm"
         rules={[{ required: true, message: 'Lütfen bölüm adınızı giriniz!' }]}
       >
@@ -30,7 +30,7 @@ export const AcademicInfostep = ({form}) => {
       </Form.Item>
 
       <Form.Item
-        name="graduationYear"
+        name="mezuniyetYili"
         label="Mezuniyet Yılı"
         rules={[{ required: true, message: 'Lütfen mezuniyet yılınızı giriniz!' }]}
       >
@@ -38,31 +38,15 @@ export const AcademicInfostep = ({form}) => {
       </Form.Item>
 
       <Form.Item
-        name="degree"
+        name="derece"
         label="Derece"
         rules={[{ required: true, message: 'Lütfen derece seçiniz!' }]}
       >
         <Select>
-          <Option value="bachelor">Lisans</Option>
-          <Option value="master">Yüksek Lisans</Option>
-          <Option value="doctorate">Doktora</Option>
+          <Option value="lisans">Lisans</Option>
+          <Option value="yuksekLisans">Yüksek Lisans</Option>
+          <Option value="doktora">Doktora</Option>
         </Select>
-      </Form.Item>
-
-      <Form.Item
-        name="startDate"
-        label="Başlangıç Tarihi"
-        rules={[{ required: true, message: 'Lütfen başlangıç tarihinizi seçiniz!' }]}
-      >
-        <DatePicker />
-      </Form.Item>
-
-      <Form.Item
-        name="endDate"
-        label="Bitiş Tarihi"
-        rules={[{ required: true, message: 'Lütfen bitiş tarihinizi seçiniz!' }]}
-      >
-        <DatePicker />
       </Form.Item>
     </>
   );

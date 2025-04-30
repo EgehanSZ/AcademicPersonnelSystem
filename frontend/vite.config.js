@@ -5,15 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0',  // Tüm ağ arayüzlerini dinler
+    host: '0.0.0.0',
     port: 5173,
     proxy: {
-      '/upload': {
-        target: 'https://mockapi.io', // API'nin gerçek adresi
-        changeOrigin: true, // Origin'in değiştirilmesini sağlar
-        secure: false, // Eğer HTTPS değilse 'false' yapın
-        rewrite: (path) => path.replace(/^\/upload/, ''), // İsteği doğru URL'ye yönlendirir
-      },
+      '/user-add': 'http://localhost:3000',
+      '/user-upload/photo': 'http://localhost:3000',
     },
   },
 })

@@ -1,0 +1,75 @@
+.account-container {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background-color: #f5f7fa;
+  /* Açık gri arkaplan */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.account-menu {
+  width: 15%;
+  min-width: 250px;
+}
+
+.account-menu .ant-card {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-menu .ant-btn {
+  text-align: left;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.account-menu .ant-btn-primary {
+  background-color: #4f46e5;
+  /* Güzel morumsu bir renk */
+  border-color: #4f46e5;
+}
+
+.account-content-card {
+  width: 80%;
+  padding: 24px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mt-6 {
+  margin-top: 5px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.lg\:w-3\/4 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-3\/4 {
+    width: 75%;
+  }
+}
