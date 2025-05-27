@@ -56,8 +56,8 @@ npm install @aws-sdk/client-s3 uuid
 ### Adım 1: Projeyi Klonlayın
 
 ```bash
-git clone https://github.com/your-username/akademik-personel-alim-sistemi.git
-cd akademik-personel-alim-sistemi
+git clone https://github.com/EgehanSZ/AcademicPersonnelSystem.git
+cd AcademicPersonnelSystem
 ```
 
 ### Adım 2: Bağımlılıkları Yükleyin
